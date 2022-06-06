@@ -1,0 +1,231 @@
+// 主頁
+.banner {
+    &-plan {
+        margin: 62px 0 180px 0;
+    }
+    @media(max-width: 768px) {
+        position: relative;
+    }
+}
+.banner-bg {
+    background-image: url('../images/banner.svg');
+    background-repeat: no-repeat;
+    width: 850px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+// 方案
+.plan {
+    @include block-mb;
+    margin-top: 11px;
+    position: relative;
+
+    @media(max-width: 768px) {
+        margin-top: 60px;
+    }
+
+    // 方案人數列表
+    &-list {
+        margin-top: 48px;
+        margin-bottom: 64px;
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+
+        @media(max-width: 768px) {
+            flex-wrap: wrap;
+            margin-top: 24px;
+            margin-bottom: 48px;
+        }
+
+        &-btn {
+            display: block;
+            padding: 12px 32px;
+            font-size: 18px;
+            border-radius: 27px;
+            background: #FFFFFF;
+            color: $primary-color;
+            border: 1px solid $primary-color;
+            &:hover {
+                background: $primary-color;
+                color: #FFFFFF;
+            }
+            &-active {
+                background: $primary-color;
+                color: #FFFFFF;
+            }
+
+            @media(max-width: 768px) {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+        }
+    }
+
+    // 方案詳細資訊
+    &-info {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        gap: 16px;
+        @media(max-width: 768px) {
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        &-item {
+            padding: 0 32px;
+            box-shadow: $box-shadow;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #FFFFFF;
+        }
+        h3 {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px 0;
+            border-bottom: 1px solid #DDDDDD;
+            width: 100%;
+            @media(max-width: 768px) {
+                padding: 16px;
+            }
+        }
+        &-text {
+            color: $secondary-coloer;
+            padding: 32px 0;
+            @media(max-width: 768px) {
+                padding: 24px 0;
+            }
+        }
+        .plan-btn {
+            margin-top: 16px;
+            margin-bottom: 32px;
+            @media(max-width: 768px) {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    // 詳細資訊 內容
+    &-deteil {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 32px;
+
+        .deteil-box {
+            background: #F5F5F5;
+            border-radius: 12px;
+            h4 {
+                font-size: 12px;
+                padding: 24px 54px 8px 54px;
+                color: $secondary-coloer;
+                @media(max-width: 768px) {
+                    padding: 16px 40px 8px 40px;
+                }
+            }
+
+            &-text {
+                font-size: 32px;
+                padding-bottom: 24px;
+                @media(max-width: 768px) {
+                    font-size: 28px;
+                }
+            }
+
+            .num {
+                color: $primary-color;
+            }
+        }
+
+        .equarl {
+            font-size: 29px;
+            @media(max-width: 768px) {
+                font-size: 24px;
+            }
+        }
+    }
+
+    // 詳細資訊 特色
+    &-feature {
+        text-align: left;
+        li {
+            padding-bottom: 16px;
+            @media(max-width: 768px) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .ball-3 {
+        background-image: url('../images/ball03.svg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 360px;
+        height: 360px;
+        position: absolute;
+        bottom: 60px;
+        left: -260px;
+        z-index: -1;
+        @media(max-width: 768px) {
+            bottom: 360px;
+        }
+    }
+}
+
+// 常見問題
+.qa {
+    @include block-mb;
+
+    &-list {
+        margin-top: 48px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+
+        &-item {
+            width: calc(100% - 230px);
+            box-shadow: $box-shadow;
+            border-radius: 12px;
+            padding: 0 32px;
+        }
+    }
+
+    // 問題
+    &-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0 16px 0;
+        h3 {
+            color: $secondary-coloer;
+        }
+
+        .minus {
+            display: none;
+        }
+
+        .active {
+            color: $primary-color;
+            font-weight: bold;
+        }
+        
+    }
+
+    // 答案
+    &-answer {
+        color: #747474;
+        padding-top: 8px;
+        padding-bottom: 16px;
+        display: none;
+    }
+    
+}

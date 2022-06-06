@@ -1018,6 +1018,12 @@ sub {
   padding: 0 32px;
 }
 
+@media (max-width: 768px) {
+  .qa-list-item {
+    width: 100%;
+  }
+}
+
 .qa-question {
   display: -webkit-box;
   display: -ms-flexbox;
